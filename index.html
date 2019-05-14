@@ -23,7 +23,7 @@
   overflow: auto; /* Enable scroll if needed */
   background-color: rgb(0,0,0); /* Fallback color */
   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-  padding-top: 60px;
+  padding-top: 100px;
 }
 
 /* Modal Content/Box */
@@ -84,12 +84,12 @@ class="close" title="Close Modal">&times;</span>
   <!-- Modal Content -->
   <form class="modal-content animate" action="/action_page.php">
     <div class="container">
-      <label for="uname"><b>Username</b></label>
-      <input type="text" placeholder="Enter Username" name="uname" required>
-
-      <label for="psw"><b>Password</b></label>
+      <label for="uname" style="padding-right: 42px; padding-top: 20px;"><b>Email:</b></label>
+      <input type="text" placeholder="Enter Email" name="uname" required>
+    <br>
+      <label for="psw" style="padding-right: 12px"><b>Password:</b></label>
       <input type="password" placeholder="Enter Password" name="psw" required>
-
+    <br>
       <button type="submit">Login</button>
       <label>
         <input type="checkbox" checked="checked" name="remember"> Remember me
@@ -97,7 +97,7 @@ class="close" title="Close Modal">&times;</span>
     </div>
 
     <div class="container" style="background-color:#f1f1f1">
-      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn" style="float: right; margin: 10px;">Cancel</button>
     </div>
   </form>
 </div> 
