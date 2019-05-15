@@ -18,6 +18,27 @@
     <link rel="stylesheet" href="indexStyle.css">
     <script src="indexActions.js"></script>
     
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/5.5.3/firebase.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#config-web-app -->
+
+    <script>
+      // Your web app's Firebase configuration
+      var config = {
+        apiKey: "AIzaSyALaI1FDi45oes5K2bgvofXC_Wga-RPyNs",
+        authDomain: "foothills-points.firebaseapp.com",
+        databaseURL: "https://foothills-points.firebaseio.com",
+        projectId: "foothills-points",
+        storageBucket: "foothills-points.appspot.com",
+        messagingSenderId: "263182357522",
+        appId: "1:263182357522:web:ee78f631a78f2337"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(config);
+      getCurrentScores();
+    </script>
   </head>
   
   <body>
@@ -48,59 +69,25 @@
 
         <div style="margin-top: 20px;">
           <label class="d-inline" style="margin-left: 20px; margin-right: 10px;"><b>Passcode</b></label>
-          <input type="text" class="form-control d-inline" id="points">
+          <input type="password" class="form-control d-inline" id="passcode">
         </div>
       
       </form>
       <br>
       <div>
-        <button type="button" class="btn btn-primary" style="margin-left: 20px;" onclick="saveToFirebase('this-is-a-test')">Submit</button>
+        <button type="button" class="btn btn-primary" style="margin-left: 20px;" onclick="saveToFirebase()">Submit</button>
       </div>
     </div>
     
     <div style="margin: 40px;">
-      <h1>00</h1>
+      <h1 id="h1Score" class="d-inline">0</h1>
+      <h1 id="h2Score" class="d-inline" style="margin-left:20px;">0</h1>
+      <h1 id="h3Score" class="d-inline" style="margin-left:20px;">0</h1>
+      <h1 id="h4Score" class="d-inline" style="margin-left:20px;">0</h1>
     </div>
     
     <div class="footer-copyright text-left py-3" style="font-size: 12px; margin: 20px;">
       Created By: Derek Braun <br> Last Updated: May 15, 2019
     </div>
-    
-    <!-- The core Firebase JS SDK is always required and must be listed first -->
-    <script src="https://www.gstatic.com/firebasejs/5.5.3/firebase-app.js"></script>
-
-    <!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#config-web-app -->
-
-    <script>
-      // Your web app's Firebase configuration
-      var config = {
-        apiKey: "AIzaSyALaI1FDi45oes5K2bgvofXC_Wga-RPyNs",
-        authDomain: "foothills-points.firebaseapp.com",
-        databaseURL: "https://foothills-points.firebaseio.com",
-        projectId: "foothills-points",
-        storageBucket: "foothills-points.appspot.com",
-        messagingSenderId: "263182357522",
-        appId: "1:263182357522:web:ee78f631a78f2337"
-      };
-      // Initialize Firebase
-      firebase.initializeApp(config);
-      
-      function saveToFirebase(email) {
-    var emailObject = {
-        email: email
-    };
-
-    firebase.database().ref('subscription-entries/').push().set(emailObject)
-        .then(function(snapshot) {
-            success(); // some success method
-        }, function(error) {
-            console.log('error' + error);
-            error(); // some error method
-        });
-}
-
-saveToFirebase("ThisTest");
-    </script>
   </body>
 </html>
