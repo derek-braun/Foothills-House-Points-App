@@ -1,100 +1,60 @@
- <!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-
-<!-- jQuery library -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-
-<!-- Popper JS -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-
-<!-- Latest compiled JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script> 
+<!DOCTYPE html>
+<html>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  
+  <!-- Popper JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script> 
+  
+  <head>
+    <title>House Points</title>
     
-<style>
-     /* The Modal (background) */
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-  padding-top: 100px;
-}
-
-/* Modal Content/Box */
-.modal-content {
-  background-color: #fefefe;
-  margin: 5px auto; /* 15% from the top and centered */
-  border: 1px solid #888;
-  width: 400px; /* Could be more or less, depending on screen size */
-}
-
-/* The Close Button */
-.close {
-  /* Position it in the top right corner outside of the modal */
-  position: absolute;
-  right: 25px;
-  top: 0;
-  color: #000;
-  font-size: 35px;
-  font-weight: bold;
-}
-
-/* Close button on hover */
-.close:hover,
-.close:focus {
-  color: red;
-  cursor: pointer;
-}
-
-/* Add Zoom Animation */
-.animate {
-  -webkit-animation: animatezoom 0.6s;
-  animation: animatezoom 0.6s
-}
-
-@-webkit-keyframes animatezoom {
-  from {-webkit-transform: scale(0)}
-  to {-webkit-transform: scale(1)}
-}
-
-@keyframes animatezoom {
-  from {transform: scale(0)}
-  to {transform: scale(1)}
-} 
-</style>
-<div class="jumbotron text-center" style="background-color:#999999">
-  <h1>Foothills House Points App</h1>
-  <p>Version 1.0</p>
-</div>
-
- <!-- Button to open the modal login form -->
-<button onclick="document.getElementById('id01').style.display='block'">Login</button>
-
-<!-- The Modal -->
-<div id="id01" class="modal">
-  <span onclick="document.getElementById('id01').style.display='none'"
-class="close" title="Close Modal">&times;</span>
-
-  <!-- Modal Content -->
-  <form class="modal-content animate" action="/action_page.php">
-    <div class="container">
-      <label for="uname" style="padding-right: 42px; padding-top: 20px;"><b>Email:</b></label>
-      <input type="text" placeholder="Enter Email" name="uname" required>
-    <br>
-      <label for="psw" style="padding-right: 12px"><b>Password:</b></label>
-      <input type="password" placeholder="Enter Password" name="psw" required>
-    <br>
-      <button type="submit" style="margin-top: 10px; margin-right: 10px; margin-bottom: 10px;">Login</button>
+    <link rel="stylesheet" href="indexStyle.css">
+    <script>
+    
+      function setHouseText(text){
+        document.getElementById("houseText").setAttribute("value", text);
+      }
+      
+    </script>
+  </head>
+  
+  <body>
+    <div class="jumbotron text-center" style="background-color:#999999">
+      <h1 style="color: #ffffff"><b>Foothills House Points App</b></h1>
     </div>
-
-    <div class="container" style="background-color:#f1f1f1">
-      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn" style="float: right; margin-top: 10px; margin-bottom: 10px;">Cancel</button>
+    
+    <div>
+      <form class="form-inline">
+        
+        <div class="input-group" style="margin-left: 20px;">
+          <div class="input-group-prepend">
+            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">House</button>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="javascript:setHouseText('House 1')">House 1</a>
+              <a class="dropdown-item" href="javascript:setHouseText('House 2')">House 2</a>
+              <a class="dropdown-item" href="javascript:setHouseText('House 3')">House 3</a>
+              <a class="dropdown-item" href="javascript:setHouseText('House 4')">House 4</a>
+            </div>
+          </div>
+          <input type="text" class="form-control" id="houseText">
+        </div>
+        
+        <label style="margin-left: 20px; margin-right: 10px;"><b>Points</b></label>
+        <input type="text" class="form-control" id="points">
+        
+        <label style="margin-left: 20px; margin-right: 10px;"><b>Passcode</b></label>
+        <input type="text" class="form-control" id="points">
+      </form>
     </div>
-  </form>
-</div> 
+    <div class="footer-copyright text-left py-3" style="font-size: 12px; margin: 20px;">
+      Created By: Derek Braun <br> Last Update: May 15, 2019
+    </div>
+  </body>
+</html>
