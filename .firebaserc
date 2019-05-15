@@ -1,0 +1,6 @@
+{
+  "projects": {
+    "default": "foothills-points",
+    "staging": "foothills-points"
+  }
+}
