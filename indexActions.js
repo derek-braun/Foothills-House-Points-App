@@ -56,17 +56,21 @@ function getCurrentScores(){
     firebase.database().ref('Dragon').once('value').then(function(dataSnapshot) {
         house1 = dataSnapshot.val();
         document.getElementById("h1Score").innerHTML = house1;
+        document.getElementById("h1Score").style.fontWeight = "900";
     });
     firebase.database().ref('Griffin').once('value').then(function(dataSnapshot) {
         house2 = dataSnapshot.val();
         document.getElementById("h2Score").innerHTML = house2;
+        document.getElementById("h2Score").style.fontWeight = "900";
     });
     firebase.database().ref('Phoenix').once('value').then(function(dataSnapshot) {
         house3 = dataSnapshot.val();
         document.getElementById("h3Score").innerHTML = house3;
+        document.getElementById("h3Score").style.fontWeight = "900";
     });
     firebase.database().ref('Titan').once('value').then(function(dataSnapshot) {
         house4 = dataSnapshot.val();
         document.getElementById("h4Score").innerHTML = house4;
+        document.getElementById("h4Score").style.fontWeight = "900";
     });
 }
