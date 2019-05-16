@@ -46,14 +46,14 @@
   <body style="background-color: #fffcf8">
     <!--Banner includes image and title-->
     <div class="jumbotron text-center" id="banner" style="background-color:#999999">
-      <h1 style="color: #ffffff"><b>Foothills House Points App</b></h1>
+      <h1 style="color: #ffffff; -webkit-text-stroke: 2px gray; font-weight: 900;">Foothills House Points</h1>
     </div>
     
     <div class="container">
       <!--Input form formatting-->
       <form class="form-inline">
         
-        <div class="input-group" style="margin-left: 20px; margin-top: 20px;">
+        <div class="input-group" style="margin-top: 20px;">
           <div class="input-group-prepend">
             <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">House</button>
             <div class="dropdown-menu">
@@ -68,16 +68,16 @@
         </div>
         
         <div style="margin-top: 20px;">
-          <label class="d-inline" style="margin-left: 20px; margin-right: 10px;"><b>Points</b></label>
+          <label class="d-inline" style="margin-left: 20px; margin-right: 5px;"><b>Points</b></label>
           <input type="text" class="form-control d-inline" id="points">
         </div>
 
         <div style="margin-top: 20px;">
-          <label class="d-inline" style="margin-left: 20px; margin-right: 10px;"><b>Passcode</b></label>
+          <label class="d-inline" style="margin-left: 20px; margin-right: 5px;"><b>Passcode</b></label>
           <input type="password" class="form-control d-inline" id="passcode">
         </div>
         
-        <button type="button" class="btn btn-primary d-inline" style="margin-left: 40px;; margin-top: 20px;" onclick="saveToFirebase()" ontouchstart="saveToFirebase">Submit</button>
+        <button type="button" class="btn btn-primary d-inline" style="margin-left: 20px; margin-top: 20px;" onclick="saveToFirebase()" ontouchstart="saveToFirebase">Submit</button>
     
       </form>
     </div>
@@ -86,7 +86,7 @@
       <div style="padding-top: 100px;">
         <!--House Scores-->
         <div class="d-inline">
-          <div class="jumbotron d-inline" style="background-color: #ff7e7e; margin-left: 30px">
+          <div class="jumbotron d-inline" style="background-color: #ff7e7e;">
             <h1 id="h1Score" class="d-inline" style="margin: 50px; color: #ffffff; -webkit-text-stroke: 2px gray;"><b>0</b></h1>
           </div>
           <div class="jumbotron d-inline" style="background-color: #7eafff; margin-left: 30px;">
