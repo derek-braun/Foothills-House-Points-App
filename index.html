@@ -15,6 +15,7 @@
   <head>
     <title>House Points</title>
     
+    <!--Link to stylesheet and main javascript code-->
     <link rel="stylesheet" href="indexStyle.css">
     <script src="indexActions.js"></script>
     
@@ -25,7 +26,7 @@
      https://firebase.google.com/docs/web/setup#config-web-app -->
 
     <script>
-      // Your web app's Firebase configuration
+      // Foothills House Points App firebase connection and configuration details
       var config = {
         apiKey: "AIzaSyALaI1FDi45oes5K2bgvofXC_Wga-RPyNs",
         authDomain: "foothills-points.firebaseapp.com",
@@ -37,26 +38,30 @@
       };
       // Initialize Firebase
       firebase.initializeApp(config);
+      // Load the initial scores from the database
       getCurrentScores();
     </script>
   </head>
   
-  <body>
+  <body style="background-color: #ffffff">
+    <!--Banner includes image and title-->
     <div class="jumbotron text-center" style="background-color:#999999">
       <h1 style="color: #ffffff"><b>Foothills House Points App</b></h1>
     </div>
     
     <div class="container-left">
+      <!--Input form formatting-->
       <form class="form-inline">
         
         <div class="input-group" style="margin-left: 20px; margin-top: 20px;">
           <div class="input-group-prepend">
             <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">House</button>
             <div class="dropdown-menu">
-              <a class="dropdown-item" href="javascript:setHouseText('House 1')">House 1</a>
-              <a class="dropdown-item" href="javascript:setHouseText('House 2')">House 2</a>
-              <a class="dropdown-item" href="javascript:setHouseText('House 3')">House 3</a>
-              <a class="dropdown-item" href="javascript:setHouseText('House 4')">House 4</a>
+              <!--Dropdown items fill in the text field-->
+              <a class="dropdown-item" href="javascript:setHouseText('Dragon')">Dragon</a>
+              <a class="dropdown-item" href="javascript:setHouseText('Griffin')">Griffin</a>
+              <a class="dropdown-item" href="javascript:setHouseText('Phoenix')">Phoenix</a>
+              <a class="dropdown-item" href="javascript:setHouseText('Titan')">Titan</a>
             </div>
           </div>
           <input type="text" class="form-control" id="houseText">
@@ -75,19 +80,22 @@
       </form>
       <br>
       <div>
-        <button type="button" class="btn btn-primary" style="margin-left: 20px;" onclick="saveToFirebase()">Submit</button>
+        <!--Submit button updates firebase database and clears inputs-->
+        <button type="button" class="btn btn-primary" style="margin-left: 20px;" onclick="saveToFirebase()" ontouchstart="saveToFirebase">Submit</button>
       </div>
     </div>
     
     <div style="margin: 40px;">
+      <!--House Scores-->
       <h1 id="h1Score" class="d-inline">0</h1>
       <h1 id="h2Score" class="d-inline" style="margin-left:20px;">0</h1>
       <h1 id="h3Score" class="d-inline" style="margin-left:20px;">0</h1>
       <h1 id="h4Score" class="d-inline" style="margin-left:20px;">0</h1>
     </div>
     
+    <!--Footer provides date of most recent page update-->
     <div class="footer-copyright text-left py-3" style="font-size: 12px; margin: 20px;">
-      Created By: Derek Braun <br> Last Updated: May 15, 2019
+      Created By: Derek Braun <br> Last Updated: May 16, 2019
     </div>
   </body>
 </html>
