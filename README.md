@@ -16,5 +16,5 @@ Github Pages
 Firebase Real-time Database (max usage 10gb)
 
 ## General Information:
-Using Bootstrap 4 for styling
+Using Bootstrap 4 for styling.
 Firebase connection established using firebase.js
