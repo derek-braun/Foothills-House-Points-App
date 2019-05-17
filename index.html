@@ -48,7 +48,6 @@
     <div class="jumbotron text-center" id="banner" style="background-color:#999999">
       <h1 style="color: #ffffff; -webkit-text-stroke: 2px gray; font-weight: 900;">Foothills House Points</h1>
     </div>
-    
     <div class="container">
       <!--Input form formatting-->
       <form class="form-inline">
@@ -57,11 +56,12 @@
           <div class="input-group-prepend">
             <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">House</button>
             <div class="dropdown-menu">
+              
               <!--Dropdown items fill in the text field-->
-              <a class="dropdown-item" href="javascript:setHouseText('Dragon')">Dragon</a>
-              <a class="dropdown-item" href="javascript:setHouseText('Griffin')">Griffin</a>
-              <a class="dropdown-item" href="javascript:setHouseText('Phoenix')">Phoenix</a>
-              <a class="dropdown-item" href="javascript:setHouseText('Titan')">Titan</a>
+              <a class="dropdown-item" href="javascript:setHouseText('Dragon')" style="background-color: #ff7e7e;">Dragon</a>
+              <a class="dropdown-item" href="javascript:setHouseText('Griffin')" style="background-color: #ffff7e;">Griffin</a>
+              <a class="dropdown-item" href="javascript:setHouseText('Phoenix')" style="background-color: #7eafff;">Phoenix</a>
+              <a class="dropdown-item" href="javascript:setHouseText('Titan')" style="background-color: #9bff7e;">Titan</a>
             </div>
           </div>
           <input type="text" class="form-control" id="houseText">
@@ -71,7 +71,7 @@
           <label class="d-inline" style="margin-left: 20px; margin-right: 5px;"><b>Points</b></label>
           <input type="text" class="form-control d-inline" id="points">
         </div>
-
+        
         <div style="margin-top: 20px;">
           <label class="d-inline" style="margin-left: 20px; margin-right: 5px;"><b>Passcode</b></label>
           <input type="password" class="form-control d-inline" id="passcode">
@@ -87,18 +87,18 @@
         <!--House Scores-->
         <div class="d-inline">
           <div class="jumbotron d-inline" style="background-color: #ff7e7e;">
-            <h1 id="h1Score" class="d-inline" style="margin: 50px; color: #ffffff; -webkit-text-stroke: 2px gray;"><b>0</b></h1>
+            <h1 id="h1Score" class="d-inline" style="margin: 50px; color: #ffffff; -webkit-text-stroke: 2px gray; font-weight: 900;"><b>0</b></h1>
           </div>
-          <div class="jumbotron d-inline" style="background-color: #7eafff; margin-left: 30px;">
-            <h1 id="h2Score" class="d-inline" style="margin: 50px; color: #ffffff; -webkit-text-stroke: 2px gray;"><b>0</b></h1>
+          <div class="jumbotron d-inline" style="background-color: #ffff7e; margin-left: 30px;">
+            <h1 id="h2Score" class="d-inline" style="margin: 50px; color: #ffffff; -webkit-text-stroke: 2px gray; font-weight: 900;"><b>0</b></h1>
           </div>
         </div>
         <div class="d-inline">
-          <div class="jumbotron d-inline" style="background-color: #9bff7e; margin-left: 30px;">
-            <h1 id="h3Score" class="d-inline" style="margin: 50px; color: #ffffff; -webkit-text-stroke: 2px gray;"><b>0</b></h1>
+          <div class="jumbotron d-inline" style="background-color: #7eafff; margin-left: 30px;">
+            <h1 id="h3Score" class="d-inline" style="margin: 50px; color: #ffffff; -webkit-text-stroke: 2px gray; font-weight: 900;"><b>0</b></h1>
           </div>
-          <div class="jumbotron d-inline" style="background-color: #ffff7e; margin-left: 30px;">
-            <h1 id="h4Score" class="d-inline" style="margin: 50px; color: #ffffff; -webkit-text-stroke: 2px gray;"><b>0</b></h1>
+          <div class="jumbotron d-inline" style="background-color: #9bff7e; margin-left: 30px;">
+            <h1 id="h4Score" class="d-inline" style="margin: 50px; color: #ffffff; -webkit-text-stroke: 2px gray; font-weight: 900;"><b>0</b></h1>
           </div>
         </div>
       </div>
@@ -109,4 +109,4 @@
       Created By: Derek Braun <br> Last Updated: May 16, 2019
     </div>
   </body>
-</html
+</html>
