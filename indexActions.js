@@ -40,6 +40,7 @@ async function saveToFirebase() {
                 }
             }
         }
+        
         else {
             alert("Incorrect Passcode");
         }
